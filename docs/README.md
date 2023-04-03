@@ -59,9 +59,9 @@ The Pride Pack adds color palettes for various pride flags.  The version
 
 ![](pride.png)
 
-![](Philly pride.png)
+![](Philly%20pride.png)
 
-![](Enby pride.png)
+![](Enby%20pride.png)
 
 # See Also
 
