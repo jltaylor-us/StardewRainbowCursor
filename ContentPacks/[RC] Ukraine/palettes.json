@@ -1,0 +1,14 @@
+{
+    // Copyright 2023 Jamie Taylor
+    "FormatVersion": "1.0.0",
+    "Palettes": [
+        {
+            "Id": "ukraine",
+            "Name": "Slava Ukraini",
+            "Colors": [
+                {"R": 0, "G": 87, "B": 183},
+                {"R": 255, "G": 221, "B": 0}
+            ]
+        }
+    ]
+}

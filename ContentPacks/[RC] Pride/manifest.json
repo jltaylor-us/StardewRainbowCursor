@@ -1,0 +1,13 @@
+{
+    "Name": "Rainbow Cursor Pride Pack",
+    "Author": "Jamie Taylor",
+    "Version": "1.0.0",
+    "Description": "Pride flag color palettes for Rainbow Cursor",
+    "UniqueID": "jltaylor-us.rc.pride",
+    "ContentPackFor": {
+        "UniqueID": "jltaylor-us.RainbowCursor"
+    },
+    "UpdateKeys": [
+        "Nexus:15944"
+    ]
+}

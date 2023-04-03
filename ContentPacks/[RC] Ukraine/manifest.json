@@ -1,0 +1,13 @@
+{
+    "Name": "Rainbow Cursor Ukraine Pack",
+    "Author": "Jamie Taylor",
+    "Version": "1.0.0",
+    "Description": "Ukrainian flag color palette for Rainbow Cursor",
+    "UniqueID": "jltaylor-us.rc.ukraine",
+    "ContentPackFor": {
+        "UniqueID": "jltaylor-us.RainbowCursor"
+    },
+    "UpdateKeys": [
+        "Nexus:15943"
+    ]
+}
