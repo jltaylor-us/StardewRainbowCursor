@@ -57,12 +57,12 @@ Each color palette definition looks like this:
 
 The comma on the last line is optional for the last (or only) palette, but
 it's ok to leave it in.  `Name` is optional; the value displayed in the
-configuration UI will fall back to the value of `Id` if it's missing (and
+configuration UI will fall back to the value of `Id` if `Name` is missing (and
 there's no internationalization file - see below).  `Id` and `Colors` are
 required.
 
 The colors in your color palette go in the blank space in the middle.
-Each one is specified as Red, Green, and Blue values from 0 to 255.  For
+Each one is specified as `R`ed, `G`reen, and `B`lue values from 0 to 255.  For
 example, red would look like
 ```json
          {"R": 255, "G": 0, "B": 0},
@@ -71,7 +71,7 @@ example, red would look like
 As with the entire palette object, the trailing comma is optional on the
 last (or only) color.
 
-So, putting all of that together, if you wanted to make a Christmast
+So, putting all of that together, if you wanted to make a Christmas
 themed palette with Red, White, and Green, then your `palettes.json` would
 look something like this:
 
@@ -104,7 +104,7 @@ to display as a tooltip over your palette in the GMCM interface.
 
 You can read more about the file layout and format on the Stardew Valley
 Wiki (linked above), but to continue on with this example, create an empty
-translation file at `[RC]  Example/i18n/default.json`.
+translation file at `[RC] Example/i18n/default.json`.
 
 Each palette you defined in `palettes.json` has two different translatable
 properties.  The names of these properties are built using the value of

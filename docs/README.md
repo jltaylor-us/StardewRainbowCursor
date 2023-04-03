@@ -58,7 +58,9 @@ The Pride Pack adds color palettes for various pride flags.  The version
 * trans, enby, agender, genderfluid, and genderqueer flags
 
 ![](pride.png)
+
 ![](Philly pride.png)
+
 ![](Enby pride.png)
 
 # See Also
