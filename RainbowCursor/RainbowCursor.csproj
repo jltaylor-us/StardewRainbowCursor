@@ -3,7 +3,7 @@
   <PropertyGroup>
     <UniqueId>jltaylor-us.RainbowCursor</UniqueId>
     <Name>Rainbow Cursor</Name>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Jamie Taylor</Authors>
     <Description>Makes the cursor cycle through a rainbow of colors</Description>
     <!-- SMAPI version 3.17 required for the GetApi(IModInfo) signature. -->
