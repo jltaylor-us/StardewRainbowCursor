@@ -10,7 +10,7 @@
   "UniqueID": "jltaylor-us.RainbowCursor",
   "Name": "Rainbow Cursor",
   "Author": "Jamie Taylor",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "Makes the cursor cycle through a rainbow of colors",
   "MinimumApiVersion": "3.17",
   "EntryDll": "RainbowCursor.dll",
