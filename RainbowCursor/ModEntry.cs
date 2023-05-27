@@ -90,6 +90,15 @@ namespace RainbowCursor {
             } catch (Exception ex) {
                 Monitor.Log("transpiler patch on IClickableMenu.drawMouse failed:  " + ex.Message, LogLevel.Warn);
             }
+            if (Helper.ModRegistry.Get("Annosz.UiInfoSuite2") is IModInfo info) {
+                Monitor.Log("Patching UIInfoSuite2 DrawMouseCursor", LogLevel.Debug);
+                try {
+                    harmony.Patch(AccessTools.Method("UIInfoSuite2.Infrastructure.Tools:DrawMouseCursor"),
+                        transpiler: new HarmonyMethod(GetType(), nameof(ReplaceDrawCall)));
+                } catch (Exception ex) {
+                    Monitor.Log("transpiler patch on UIInfoSuite2.Infrastructure.Tools:DrawMouseCursor failed:  " + ex.Message, LogLevel.Warn);
+                }
+            }
         }
 
         private static IEnumerable<CodeInstruction> ReplaceDrawCall(IEnumerable<CodeInstruction> instructions) {
