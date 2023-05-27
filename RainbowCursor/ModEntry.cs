@@ -106,7 +106,6 @@ namespace RainbowCursor {
                 }
             }
             sMonitor.Log($"replaced {replaced} call(s) to Draw", LogLevel.Debug);
-
         }
 
         private Color GetCurrentColor(ModConfig config, List<Color> colors) {
@@ -128,10 +127,19 @@ namespace RainbowCursor {
             return GetCurrentColor(this.config, this.currentColorPalette.Colors);
         }
 
+        private static Rectangle? AdjustSourceRect(Rectangle? sourceRect) {
+            if (sourceRect.HasValue && sourceRect.Value.X == 0 && sourceRect.Value.Y == 16) {
+                // special case for the pointer when controller is in use
+                return new(0, 0, sourceRect.Value.Width, sourceRect.Value.Height);
+            }
+            return sourceRect;
+        }
+
         // This has to take exactly the same arguments at the call we're replacing in the transpiler
-        private static void DrawTheCursor(SpriteBatch spriteBatch, Texture2D originalCursors, Vector2 position, Rectangle? sourceRect, Color color, float rotation, Vector2 origin, float scale, SpriteEffects effects, float layerDepth) {
-            if (!ModEntry.instance.config.Enabled || !sourceRect.HasValue || sourceRect.Value.Top != 0 || sourceRect.Value.Right > 128) {
-                spriteBatch.Draw(originalCursors, position, sourceRect, color, rotation, origin, scale, effects, layerDepth);
+        private static void DrawTheCursor(SpriteBatch spriteBatch, Texture2D originalCursors, Vector2 position, Rectangle? originalSourceRect, Color color, float rotation, Vector2 origin, float scale, SpriteEffects effects, float layerDepth) {
+            Rectangle? sourceRect = AdjustSourceRect(originalSourceRect);
+            if (!ModEntry.instance.config.Enabled || !sourceRect.HasValue || sourceRect.Value.Top != 0 || sourceRect.Value.Right > 128 || Game1.mouseCursorTransparency == 0f) {
+                spriteBatch.Draw(originalCursors, position, originalSourceRect, color, rotation, origin, scale, effects, layerDepth);
                 return;
             }
             Color newColor = ModEntry.instance.GetCurrentColor();
